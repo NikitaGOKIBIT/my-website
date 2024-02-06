@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    height: calc(100vh - 40px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://opencages.com.ua/_nuxt/img/homepage.0151b74.jpg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+}
+
+.header::after {
+    content: "";
+    background: #0c3632;
+    position: absolute;
+    opacity: .85;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .25s ease;
+}
+
+.nav {
+    position: absolute;
+    width: calc(100% - 40px);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.have {
+    display: flex;
+    align-items: center;
+}
+
+.have li {
+    padding: 0 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.have li:last-of-type {
+    padding-right: 0;
+}
+
+.line {
+    position: relative;
+    transition: all .25s ease;
+}
+
+.line::after {
+    content: "";
+    background: #17baaa;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .25s ease;
+}
+
+.line:hover::after {
+    transform: scaleX(1);
+}
+
+.line:hover {
+    color: #17baaa;
+}
+
+.have li:nth-of-type(8) a {
+    display: flex;
+    align-items: center;
+    background-color: #dd3d53;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all .25s ease;
+}
+
+.have li:nth-of-type(8) a:hover {
+    background-color: #c9233a;
+}
+
+.lave {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.have li:nth-of-type(8) a svg {
+    width: 1em;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.logo-coutainer {
+    line-height: 1.5;
+}
+
+/* .logo-link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+} */
+
+.nav-toggle {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.burger {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    vertical-align: -0.125em;
+    cursor: pointer;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.header-content {
+    margin: auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.header-content-title {
+    font-size: 56px;
+    color: #fff;
+    line-height: 84px;
+}
+
+.header-content-title-green {
+    color: #17baaa;
+}
+
+.header-content-btn {
+    display: block;
+    background: #17baaa;
+    color: #fff;
+    align-items: center;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-flex;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 700;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 40px;
+    outline: none;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .25s ease;
+}
+
+.header-content-btn:hover {
+    background-color: #129185;
+}
+
+@media screen and (max-width: 992px) {
+    .have {
+        display: none;
+    }
+    .nav-toggle {
+        display: block;
+    }
+}
